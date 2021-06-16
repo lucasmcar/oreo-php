@@ -1,0 +1,19 @@
+{
+    "name" : "oreo/oreo-php",
+    "version": "1.0",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        { 
+            "name": "Lucas Carvalho",
+            "email": "suporte.devpoa@gmamil.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\" :  "App/",
+            "Oreo\\": "vendor/Oreo-PHP/"
+        }
+    }
+}
