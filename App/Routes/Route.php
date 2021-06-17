@@ -10,16 +10,17 @@ class Route
     public function __construct()
     {
         $this->initRoutes();
+        $this->oreoRunner($this->getUrl());
     }
 
-    public function __set($name, array $value)
+    public function setRoutes(array $routes)
     {
-        $this->$name = $value;
+        $this->route = $routes;
     }
 
-    public function __get($name)
+    public function getRoute()
     {
-        return $this->$name;
+        return $this->route;
     }
 
     public function initRoutes()
@@ -31,13 +32,26 @@ class Route
             'action' => 'index'
         );
 
-        $routes['modelo'] = array(
-            'route' => '/modelo',
-            'controller' => 'IndexController',
-            'action' => 'modelo'
-        );
 
-        $this->__set('route', $routes);
+        $this->setRoutes($routes);
+    }
+
+    public function oreoRunner($url)
+    {
+        echo $url;
+        foreach($this->getRoute() as $path => $route)
+        {
+            if($url == $route['route'])
+            {
+                $class = "App\\Controllers\\".ucfirst($route['controller']);
+
+                $controller = new $class;
+
+                $action = $route['action'];
+
+                $controller->$action();
+            }
+        }
     }
 
     public function getUrl()
