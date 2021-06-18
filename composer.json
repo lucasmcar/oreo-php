@@ -1,19 +1,23 @@
 {
     "name" : "oreo/oreo-php",
     "version": "1.0",
-    "require": {
+    "require": 
+    {
         "php": ">=7.0"
     },
-    "authors": [
+    "authors": 
+    [
         { 
-            "name": "Lucas Carvalho",
+            "name":  "Lucas Carvalho",
             "email": "suporte.devpoa@gmamil.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
+    "autoload": 
+    {
+        "psr-4": 
+        {
             "App\\" :  "App/",
-            "Oreo\\": "vendor/Oreo-PHP/"
+            "Oreo\\":  "vendor/OreoPHP/"
         }
     }
 }

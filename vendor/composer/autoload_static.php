@@ -20,7 +20,7 @@ class ComposerStaticInitb80d0d8b85402be478a5c17e7b604ad5
     public static $prefixDirsPsr4 = array (
         'Oreo\\' => 
         array (
-            0 => __DIR__ . '/..' . '/Oreo-PHP',
+            0 => __DIR__ . '/..' . '/OreoPHP',
         ),
         'App\\' => 
         array (

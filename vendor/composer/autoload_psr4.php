@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Oreo\\' => array($vendorDir . '/Oreo-PHP'),
+    'Oreo\\' => array($vendorDir . '/OreoPHP'),
     'App\\' => array($baseDir . '/App'),
 );
